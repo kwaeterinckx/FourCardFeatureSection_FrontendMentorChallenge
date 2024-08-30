@@ -1,0 +1,63 @@
+/** ==================================================
+/**     MOBILE FIRST APPROACH
+/** ================================================== */
+
+/*- --------------------------------------------------
+/*- >= 600px (Tablet - Portrait)
+/*- -------------------------------------------------- */
+@media (width >=600px) {
+    :root {
+        --fs-h1: 36px;
+        --fs-h2: 20px;
+    }
+
+    .header {
+        margin-bottom: var(--spc-800);
+        margin-inline: auto;
+        max-width: 540px;
+    }
+}
+
+/*- --------------------------------------------------
+/*- >= 900px (Tablet - Landscape)
+/*- -------------------------------------------------- */
+@media (width >=900px) {}
+
+/*- --------------------------------------------------
+/*- >= 1200px (Desktop)
+/*- -------------------------------------------------- */
+@media (width >=1200px) {
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 350px);
+        grid-template-areas:
+            ". team ."
+            "sup team calc"
+            "sup karma calc"
+            ". karma .";
+        gap: var(--spc-350);
+        margin-inline: auto;
+        max-width: min-content;
+    }
+
+    .card--green {
+        grid-area: sup;
+    }
+
+    .card--red {
+        grid-area: team;
+    }
+
+    .card--yellow {
+        grid-area: karma;
+    }
+
+    .card--blue {
+        grid-area: calc;
+    }
+}
+
+/*- --------------------------------------------------
+/*- >= 1800px (Large Desktop)
+/*- -------------------------------------------------- */
+@media (width >=1800px) {}
